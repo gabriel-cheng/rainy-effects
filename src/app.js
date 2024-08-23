@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + "../../" + 'public'));
 app.use(express.json());
 
 app.engine("handlebars", engine());
