@@ -1,0 +1,100 @@
+.section-height-test {
+    width: 100%;
+    height: 900px;
+}
+
+.rainy_home-container {
+    width: 100%;
+    background-color: var(--rainy-black);
+}
+
+.rainy_home-first {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/images/background/rainy-glass-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.rainy_home-darkest-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: var(--rainy-bg-transparency);
+}
+
+.rainy_home-first-subcontainer {
+    width: 100%;
+    max-width: 1200px;
+    z-index: 2;
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rainy_home-clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--rainy-white);
+    width: min(90vw, 500px);
+    height: min(90vw, 500px);
+    border-radius: 50%;
+}
+
+.rainy_home-clock h1 {
+    color: var(--rainy-white);
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 100;
+    font-size: calc(16px + 3vw);
+}
+
+.rainy_home-clock-hour h1::after,
+.rainy_home-clock-minutes h1::after {
+    content: ":";
+    color: white;
+    font-size: calc(16px + 3vw);
+}
+
+.rainy_home-second {
+    background-image: url("/images/background/rainy-glass-bg-02.jpg");
+    background-attachment: fixed;
+}
+
+.rainy_home-third {
+    background-image: url("/images/background/rainy-glass-bg-03.jpg");
+}
+
+.rainy_home-fourt {
+    background-image: url("/images/background/rainy-glass-bg-04.jpg");
+    background-attachment: fixed;
+}
+
+.rainy_home-fourth {
+    background-image: url("/images/background/rainy-road-bg.png");
+}
+
+.rainy_home-fifth {
+    background-image: url("/images/background/gramado-bg.jpg");
+    background-attachment: fixed;
+}
+
+.rainy_home-second,
+.rainy_home-third,
+.rainy_home-fourt,
+.rainy_home-fourth,
+.rainy_home-fifth {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
