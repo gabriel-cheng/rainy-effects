@@ -1,5 +1,5 @@
 <main class="rainy_home-container">
-    <section class="rainy_home-first">
+    <section class="rainy_home-section-config rainy_home-first">
         <div class="rainy_home-darkest-bg"></div>
         <div class="rainy_home-first-subcontainer">
             <div class="rainy_home-clock">
@@ -15,17 +15,92 @@
             </div>
         </div>
     </section>
-    <section class="rainy_home-second"></section>
-    <section class="rainy_home-third"></section>
-    <section class="rainy_home-fourt"></section>
-    <section class="rainy_home-fourth"></section>
-    <section class="rainy_home-fifth"></section>
+    <section class="rainy_home-section-config rainy_home-second">
+        <div class="rainy_home-darkest-bg"></div>
+        <div class="rainy_home-first-subcontainer">
+            <div class="rainy_home-clock">
+                <div class="rainy_home-clock-hour">
+                    <h1>17</h1>
+                </div>
+                <div class="rainy_home-clock-minutes">
+                    <h1>43</h1>
+                </div>
+                <div class="rainy_home-clock-seconds">
+                    <h1>00</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rainy_home-section-config rainy_home-third">
+        <div class="rainy_home-darkest-bg"></div>
+        <div class="rainy_home-first-subcontainer">
+            <div class="rainy_home-clock">
+                <div class="rainy_home-clock-hour">
+                    <h1>17</h1>
+                </div>
+                <div class="rainy_home-clock-minutes">
+                    <h1>43</h1>
+                </div>
+                <div class="rainy_home-clock-seconds">
+                    <h1>00</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rainy_home-section-config rainy_home-fourt">
+        <div class="rainy_home-darkest-bg"></div>
+        <div class="rainy_home-first-subcontainer">
+            <div class="rainy_home-clock">
+                <div class="rainy_home-clock-hour">
+                    <h1>17</h1>
+                </div>
+                <div class="rainy_home-clock-minutes">
+                    <h1>43</h1>
+                </div>
+                <div class="rainy_home-clock-seconds">
+                    <h1>00</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rainy_home-section-config rainy_home-fourth">
+        <div class="rainy_home-darkest-bg"></div>
+        <div class="rainy_home-first-subcontainer">
+            <div class="rainy_home-clock">
+                <div class="rainy_home-clock-hour">
+                    <h1>17</h1>
+                </div>
+                <div class="rainy_home-clock-minutes">
+                    <h1>43</h1>
+                </div>
+                <div class="rainy_home-clock-seconds">
+                    <h1>00</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rainy_home-section-config rainy_home-fifth">
+        <div class="rainy_home-darkest-bg"></div>
+        <div class="rainy_home-first-subcontainer">
+            <div class="rainy_home-clock">
+                <div class="rainy_home-clock-hour">
+                    <h1>17</h1>
+                </div>
+                <div class="rainy_home-clock-minutes">
+                    <h1>43</h1>
+                </div>
+                <div class="rainy_home-clock-seconds">
+                    <h1>00</h1>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <script>
-    const hour_el = document.querySelector(".rainy_home-clock-hour h1");
-    const minutes_el = document.querySelector(".rainy_home-clock-minutes h1");
-    const seconds_el = document.querySelector(".rainy_home-clock-seconds h1");
+    const hour_el = document.querySelectorAll(".rainy_home-clock-hour h1");
+    const minutes_el = document.querySelectorAll(".rainy_home-clock-minutes h1");
+    const seconds_el = document.querySelectorAll(".rainy_home-clock-seconds h1");
 
     const clock = setInterval(() => {
         const date = new Date();
@@ -33,18 +108,24 @@
         let minutes = date.getMinutes();
         let seconds = date.getSeconds();
 
-        if(hour < 10) {
+        if (hour < 10) {
             hour = "0" + hour;
         }
-        if(minutes < 10) {
+        if (minutes < 10) {
             minutes = "0" + minutes;
         }
-        if(seconds < 10) {
+        if (seconds < 10) {
             seconds = "0" + seconds;
         }
 
-        hour_el.textContent = hour;
-        minutes_el.textContent = minutes;
-        seconds_el.textContent = seconds;
+        for(let i of hour_el) {
+            i.textContent = hour;
+        }
+        for(let i of minutes_el) {
+            i.textContent = minutes;
+        }
+        for(let i of seconds_el) {
+            i.textContent = seconds;
+        }
     });
 </script>

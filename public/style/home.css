@@ -8,16 +8,19 @@
     background-color: var(--rainy-black);
 }
 
-.rainy_home-first {
+.rainy_home-section-config {
     width: 100%;
     height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.rainy_home-first {
     background-image: url("/images/background/rainy-glass-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
 }
 
 .rainy_home-darkest-bg {
@@ -92,8 +95,6 @@
 .rainy_home-fourt,
 .rainy_home-fourth,
 .rainy_home-fifth {
-    width: 100%;
-    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
